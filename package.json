@@ -1,0 +1,101 @@
+{
+  "name": "@aquarela/sso-ui-components",
+  "version": "0.4.6",
+  "author": "aquarela-io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aquarela-io/sso-ui-components.git"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.7.0",
+    "@eslint/js": "^9.9.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/addon-onboarding": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/react-vite": "^8.2.9",
+    "@storybook/test": "^8.2.9",
+    "@types/node": "^22.5.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.20",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "eslint-plugin-storybook": "^0.8.0",
+    "globals": "^15.9.0",
+    "lucide-react": "^0.436.0",
+    "postcss": "^8.4.41",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1",
+    "rollup": "^3.20.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "storybook": "^8.2.9",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss": "^3.4.10",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "tailwindcss": "^3.0.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.436.0",
+    "tailwind-merge": "^2.5.2",
+    "class-variance-authority": "^0.7.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./tailwind.config.js": "./tailwind.config.ts",
+    "./utils/replace-tailwind.config.js": "./utils/replace-tailwind.config.js"
+  },
+  "bugs": {
+    "url": "https://github.com/aquarela-io/sso-ui-components/issues"
+  },
+  "description": "This package contains the UI components used in Aquarela's Single Sign-On (SSO) system. It's an internal library designed to maintain consistency and ease of use across Aquarela's SSO-related projects.",
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  },
+  "files": [
+    "dist",
+    "tailwind.config.ts",
+    "utils/replace-tailwind.config.js",
+    "dist/index.css"
+  ],
+  "homepage": "https://github.com/aquarela-io/sso-ui-components#readme",
+  "license": "UNLICENSED",
+  "private": false,
+  "scripts": {
+    "dev": "vite --config vite.config.ts",
+    "build": "rimraf dist && rollup -c rollup.config.js",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts"
+}

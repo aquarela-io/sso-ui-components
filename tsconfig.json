@@ -1,0 +1,15 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/lib/*": ["src/lib/*"],
+      "@/components/*": ["src/components/*"]
+    }
+  },
+  "references": [
+    { "path": "./tsconfig.vite.json" },
+    { "path": "./tsconfig.rollup.json" }
+  ]
+}
