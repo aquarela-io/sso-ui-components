@@ -10,7 +10,7 @@ This package contains UI components used in Aquarela's Single Sign-On (SSO) syst
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
+- [Updating Tailwind Config](#updating-tailwind-config)
 - [Support](#support)
 - [License](#license)
 
