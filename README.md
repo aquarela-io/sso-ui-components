@@ -72,8 +72,9 @@ function App() {
 
 To update your `tailwind.config.ts` file with the latest configuration from the `@aquarela/sso-ui-components` package, run the following command:
 
-````bash
-node ./node_modules/@aquarela/sso-ui-components/utils/replace-tailwind-config.js```
+```bash
+node ./node_modules/@aquarela/sso-ui-components/utils/replace-tailwind-config.js
+```
 
 ## Support
 
