@@ -1,5 +1,6 @@
 {
   "name": "@aquarela/sso-ui-components",
+  "description": "This package contains the UI components used in Aquarela's Single Sign-On (SSO) system. It's an internal library designed to maintain consistency and ease of use across Aquarela's SSO-related projects.",
   "version": "0.1.0",
   "private": false,
   "type": "module",
@@ -76,6 +77,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aquarela-io/aquarela-sso-components.git"
-  }
+    "url": "https://github.com/aquarela-io/sso-ui-components.git"
+  },
+  "author": "aquarela-io",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/aquarela-io/sso-ui-components/issues"
+  },
+  "homepage": "https://github.com/aquarela-io/sso-ui-components#readme"
 }
