@@ -1,7 +1,7 @@
 {
   "name": "@aquarela/sso-ui-components",
   "description": "This package contains the UI components used in Aquarela's Single Sign-On (SSO) system. It's an internal library designed to maintain consistency and ease of use across Aquarela's SSO-related projects.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
