@@ -12,7 +12,8 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./tailwind.config.js": "./tailwind.config.js"
+    "./tailwind.config.js": "./tailwind.config.js",
+    "./tailwind.config.d.ts": "./tailwind.config.d.ts"
   },
   "files": [
     "dist",
