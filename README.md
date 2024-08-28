@@ -63,3 +63,7 @@ This is an internal library. Please refer to Aquarela's internal contribution gu
 ## License
 
 This project is proprietary and confidential. Unauthorized copying, transferring or reproduction of this library, via any medium, is strictly prohibited.
+
+## Configuração do Tailwind
+
+Para usar as configurações personalizadas do Tailwind em seu projeto, importe-as e mescle-as com suas próprias configurações:

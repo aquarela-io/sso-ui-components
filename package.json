@@ -4,20 +4,24 @@
   "version": "0.1.4",
   "private": false,
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
       "types": "./dist/index.d.ts"
     },
-    "./tailwind.config.js": "./tailwind.config.js",
-    "./tailwind.config.d.ts": "./tailwind.config.d.ts"
+    "./styles.css": "./dist/style.css",
+    "./tailwind-config": {
+      "import": "./dist/lib/tailwind-config.js",
+      "require": "./dist/lib/tailwind-config.js",
+      "types": "./dist/lib/tailwind-config.d.ts"
+    }
   },
   "files": [
-    "dist",
-    "tailwind.config.js"
+    "dist"
   ],
   "scripts": {
     "dev": "vite",
@@ -30,7 +34,8 @@
   "dependencies": {
     "lucide-react": "^0.436.0",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vite-plugin-lib-inject-css": "^2.1.1"
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
