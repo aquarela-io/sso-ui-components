@@ -10,7 +10,7 @@ export const buttonVariants = cva(
         "social-google":
           "bg-transparent text-black border-[2px] border-gray-500 hover:text-white hover:bg-black hover:border-transparent dark:text-white",
         "social-apple":
-          "bg-white text-black border-[2px] hover:border-gray-500  border-gray-200 dark:text-white font-sans dark:bg-black dark:border-transparent dark:hover:border-gray-200 dark:text-white",
+          "dark:bg-white dark:text-black border-[2px] dark:hover:border-gray-500  dark:border-gray-200 text-white font-sans bg-black border-transparent hover:border-gray-200",
       },
       size: {
         default: "p-[20px]",
