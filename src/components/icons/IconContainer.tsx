@@ -1,5 +1,6 @@
-import React, { ReactElement } from "react";
-import { useState, useEffect } from "react";
+"use client";
+import React, { ReactElement, useState, useEffect } from "react";
+
 export const IconContainer: React.FC<{
   size?: string | null;
   children: ReactElement<HTMLDivElement>;
@@ -10,14 +11,15 @@ export const IconContainer: React.FC<{
 );
 
 export function useDarkMode() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    return (
-      document.documentElement.classList.contains("dark") ||
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    );
-  });
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
+    const initialDarkMode =
+      document.documentElement.classList.contains("dark") ||
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    setIsDarkMode(initialDarkMode);
+
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
     const handleMediaQueryChange = (e: MediaQueryListEvent) => {
@@ -28,7 +30,6 @@ export function useDarkMode() {
       setIsDarkMode(document.documentElement.classList.contains("dark"));
     };
 
-    // Observe changes to the HTML element's class list
     const observer = new MutationObserver(handleClassChange);
     observer.observe(document.documentElement, {
       attributes: true,
@@ -37,7 +38,6 @@ export function useDarkMode() {
 
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    // Cleanup function
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
       observer.disconnect();
