@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <div className="flex w-full h-screen items-center justify-center">
-        <div className="max-w-[500px] w-full flex-col gap-4 flex  dark">
+        <div className="max-w-[500px] w-full flex-col gap-4 flex">
           <Button>Login</Button>
           <Button variant="google">Login com Google</Button>
         </div>

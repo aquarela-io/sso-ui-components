@@ -7,8 +7,6 @@ export const buttonVariants = cva(
       variant: {
         default:
           "bg-blue-600 text-white hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-800",
-        social:
-          "bg-transparent text-black border-[2px] border-gray-500 hover:text-white hover:bg-black hover:border-transparent dark:text-white",
         google:
           "bg-transparent text-black border-[2px] border-gray-500 hover:text-white hover:bg-black hover:border-transparent dark:text-white",
       },

@@ -28,13 +28,15 @@ Before installing the Aquarela SSO UI Components package, ensure you have the ne
 With `npm`:
 
 ```bash
-npm install react react-dom tailwindcss clsx lucide-react tailwind-merge class-variance-authority @radix-ui/react-slot tailwindcss-animate -D
+npm install  react react-dom  clsx lucide-react tailwind-merge class-variance-authority @radix-ui/react-slot --save
+npm install tailwindcss tailwindcss-animate --save-dev
 ```
 
 Or with `Bun` (recommended):
 
 ```bash
-bun add react react-dom tailwindcss clsx lucide-react tailwind-merge class-variance-authority @radix-ui/react-slot -D
+bun add  react react-dom  clsx lucide-react tailwind-merge class-variance-authority @radix-ui/react-slot
+bun add tailwindcss tailwindcss-animate -D
 ```
 
 ### Step 2: Install the Aquarela SSO UI Components Package
@@ -73,7 +75,7 @@ function App() {
 To update your `tailwind.config.ts` file with the latest configuration from the `@aquarela/sso-ui-components` package, run the following command:
 
 ```bash
-node ./node_modules/@aquarela/sso-ui-components/utils/replace-tailwind-config.js
+node ./node_modules/@aquarela/sso-ui-components/utils/replace-tailwind.config.js
 ```
 
 ## Support
@@ -83,4 +85,7 @@ For any issues or support, please contact the Aquarela development team internal
 ## License
 
 This package is intended for internal use within Aquarela's ecosystem. Please consult with the Aquarela development team regarding any licensing inquiries.
-````
+
+```
+
+```

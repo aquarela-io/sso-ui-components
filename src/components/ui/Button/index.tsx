@@ -3,8 +3,8 @@ import { Slot } from "@radix-ui/react-slot";
 import { type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
-import { GoogleIcon } from "../social-icons/GoogleIcon";
-import { buttonVariants } from "./Button.constants";
+import { GoogleIcon } from "@/components/social-icons/GoogleIcon";
+import { buttonVariants } from "./constants";
 
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,

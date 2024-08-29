@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./Button";
+import { Button } from ".";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Login Button",
@@ -7,7 +7,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: { type: "select" },
-      options: ["default", "social", "google"],
+      options: ["default", "google"],
     },
     size: {
       control: { type: "select" },
@@ -26,13 +26,6 @@ export const Default: Story = {
     children: "Default Button",
     variant: "default",
     size: "default",
-  },
-};
-
-export const Social: Story = {
-  args: {
-    children: "Social Button",
-    variant: "social",
   },
 };
 
