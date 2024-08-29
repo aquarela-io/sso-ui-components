@@ -10,19 +10,18 @@ permissions:
   packages: write
 
 jobs:
-  publish-npm:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "18.x"
-          registry-url: "https://registry.npmjs.org/"
-      - run: npm install
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
+  # publish-npm:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: "18.x"
+  #         registry-url: "https://registry.npmjs.org/"
+  #     - run: npm install
+  #     - run: npm publish
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
   publish-gpr:
     runs-on: ubuntu-latest
     steps:
@@ -30,9 +29,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18.x"
-          registry-url: "https://npm.pkg.github.com/"
-          scope: "@aquarela"
-      - run: npm install
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - run: |
+          rm -f ~/.npmrc
+          echo "@aquarela-io:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> ~/.npmrc
+          npm install
+          npm publish --registry=https://npm.pkg.github.com/
