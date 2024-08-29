@@ -8,7 +8,7 @@ import { useDarkMode } from "@/src/lib/aqr.utils";
 
 export const AppleIcon = () => {
   const isDarkMode = useDarkMode();
-  if (isDarkMode) {
+  if (!isDarkMode) {
     return (
       <svg
         width="40"
