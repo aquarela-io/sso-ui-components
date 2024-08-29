@@ -5,14 +5,17 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
+import preserveDirectives from "rollup-plugin-preserve-directives";
 
 export default {
   input: "src/index.ts",
+
   output: [
     {
-      file: "dist/index.js",
-      format: "es",
-      sourcemap: true,
+      preserveModules: true,
+      dir: "dist",
+      // format: "es",
+      // sourcemap: true,
     },
   ],
   plugins: [
@@ -38,6 +41,7 @@ export default {
       inject: true,
       minimize: true,
     }),
+    preserveDirectives(),
   ],
   external: [
     "react",

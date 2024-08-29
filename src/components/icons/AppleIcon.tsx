@@ -1,3 +1,4 @@
+"use client";
 /**
  * Copyright © Apple Inc. All rights reserved.
  * This icon is the property of Apple Inc. and is protected by copyright laws.
