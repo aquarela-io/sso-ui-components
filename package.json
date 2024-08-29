@@ -4,10 +4,13 @@
   "author": "aquarela-io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aquarela-io/sso-ui-components.git"
+    "url": "git+https://github.com/aquarela-io/sso-ui-components.git"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.7.0",
     "@eslint/js": "^9.9.0",
@@ -96,7 +99,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "version-and-push": "npm version patch && git push && git push --tags"
   },
   "type": "module",
   "types": "./dist/index.d.ts"
