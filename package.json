@@ -1,5 +1,5 @@
 {
-  "name": "@aquarela/sso-ui-components",
+  "name": "@aquarela-io/sso-ui-components",
   "version": "0.4.12",
   "author": "aquarela-io",
   "repository": {
@@ -9,7 +9,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.7.0",

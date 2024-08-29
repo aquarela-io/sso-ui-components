@@ -1,11 +1,12 @@
 "use client";
+
+import { useDarkMode } from "./IconContainer";
+
 /**
  * Copyright © Apple Inc. All rights reserved.
  * This icon is the property of Apple Inc. and is protected by copyright laws.
  * Unauthorized use or reproduction is strictly prohibited.
  */
-
-import { useDarkMode } from "@/src/lib/aqr.utils";
 
 export const AppleIcon = () => {
   const isDarkMode = useDarkMode();
