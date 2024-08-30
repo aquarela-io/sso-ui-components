@@ -9,7 +9,8 @@ const config = {
     "./src/**/*.{ts,tsx}",
     "./node_modules/@aquarela/sso-ui-components/dist/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: ["selector", '[data-mode="dark"], .dark'],
+  darkMode: ["variant", '[data-mode="dark"]'],
+
   theme: {
     container: {
       center: true,
@@ -94,7 +95,12 @@ const config = {
     },
   },
 
-  plugins: [animate],
+  plugins: [
+    animate,
+    function ({ addVariant }) {
+      addVariant("dark", ["html.dark &", '[data-mode="dark"] &']);
+    },
+  ],
 } satisfies Config;
 
 export default config;
