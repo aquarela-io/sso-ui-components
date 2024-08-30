@@ -19,8 +19,6 @@ export const AppleIcon = () => {
       setIsDarkMode(isDark);
     };
 
-    console.log(isDarkMode);
-
     checkDarkMode();
 
     const observer = new MutationObserver(checkDarkMode);

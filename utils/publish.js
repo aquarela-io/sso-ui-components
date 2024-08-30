@@ -1,7 +1,6 @@
 import fs from "fs";
 import packageJson from "../package.json" assert { type: "json" };
 
-// Verifica se o primeiro argumento passado ao script é 'npm' ou 'github'
 const target = process.argv[2];
 
 if (target === "npm") {
@@ -19,7 +18,6 @@ if (target === "npm") {
   process.exit(1);
 }
 
-// Escreve o package.json modificado de volta ao sistema de arquivos
 fs.writeFileSync("package.json", JSON.stringify(packageJson, null, 2));
 
 console.log(`Pacote preparado para publicação em: ${target}`);
