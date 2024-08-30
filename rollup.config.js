@@ -14,8 +14,7 @@ export default {
     {
       preserveModules: true,
       dir: "dist",
-      // format: "es",
-      // sourcemap: true,
+      sourcemap: true,
     },
   ],
   plugins: [

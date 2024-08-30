@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 const config = {
-  darkMode: ["selector"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -10,7 +9,7 @@ const config = {
     "./src/**/*.{ts,tsx}",
     "./node_modules/@aquarela/sso-ui-components/dist/**/*.{js,ts,jsx,tsx}",
   ],
-  prefix: "",
+  darkMode: ["selector", '[data-mode="dark"], .dark'],
   theme: {
     container: {
       center: true,
@@ -94,7 +93,8 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+
+  plugins: [animate],
 } satisfies Config;
 
 export default config;

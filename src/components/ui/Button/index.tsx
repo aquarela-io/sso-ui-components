@@ -27,7 +27,6 @@ const handleIcons = ({ variant }: VariantProps<typeof buttonVariants>) => {
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
-    console.log("Button Rendered");
     const Comp = asChild ? Slot : "button";
 
     const injectIconOnChild = React.isValidElement(children) ? (
