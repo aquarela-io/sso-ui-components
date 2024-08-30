@@ -6,7 +6,14 @@ function App() {
       <div className="flex w-full h-screen items-center justify-center">
         <div className="max-w-[500px] w-full flex-col gap-4 flex items-center">
           <Button
-            onClick={() => document.documentElement.classList.toggle("dark")}
+            onClick={() => {
+              const html = document.documentElement;
+              if (html.getAttribute("data-mode") === "dark") {
+                html.removeAttribute("data-mode");
+              } else {
+                html.setAttribute("data-mode", "dark");
+              }
+            }}
           >
             Toggle Dark Mode
           </Button>
